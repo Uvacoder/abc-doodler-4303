@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/antfu/drauu/issues"
   },
-  "homepage": "https://github.com/antfu/drauu#readme",
+  "homepage": "https://abc-drauu.netlify.app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antfu/drauu.git"
