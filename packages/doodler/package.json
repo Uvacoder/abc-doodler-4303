@@ -28,6 +28,6 @@
     "prepublishOnly": "nr build"
   },
   "dependencies": {
-    "@doodler/core": "workspace:*"
+    "@drauu/core": "workspace:*"
   }
 }
