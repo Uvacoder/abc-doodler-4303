@@ -2,7 +2,7 @@ import { createNanoEvents } from 'nanoevents'
 import { createModels } from './models'
 import { Brush, Options, DrawingMode, EventsMap } from './types'
 
-export class Drauu {
+export class Doodler {
   el: SVGSVGElement | null = null
   svgPoint: DOMPoint | null = null
   eventEl: Element | null = null
@@ -56,14 +56,14 @@ export class Drauu {
 
   mount(el: string | SVGSVGElement, eventEl?: string | Element) {
     if (this.el)
-      throw new Error('[drauu] already mounted, unmount previous target first')
+      throw new Error('[doodler] already mounted, unmount previous target first')
 
     this.el = this.resolveSelector(el)
 
     if (!this.el)
-      throw new Error('[drauu] target element not found')
+      throw new Error('[doodler] target element not found')
     if (this.el.tagName !== 'svg')
-      throw new Error('[drauu] can only mount to a SVG element')
+      throw new Error('[doodler] can only mount to a SVG element')
 
     this.svgPoint = this.el.createSVGPoint()
 
@@ -223,6 +223,6 @@ export class Drauu {
   }
 }
 
-export function createDrauu(options?: Options) {
-  return new Drauu(options)
+export function createDoodler(options?: Options) {
+  return new Doodler(options)
 }
