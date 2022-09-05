@@ -1,2 +1,2 @@
-export * from './drauu'
+export * from './doodler'
 export * from './types'
