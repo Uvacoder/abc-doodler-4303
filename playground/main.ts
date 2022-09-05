@@ -14,9 +14,9 @@ const doodler = createDoodler({
 window.addEventListener('keydown', (e) => {
   if (e.code === 'KeyZ' && (e.ctrlKey || e.metaKey)) {
     if (e.shiftKey)
-      drauu.redo()
+      doodler.redo()
     else
-      drauu.undo()
+      doodler.undo()
     return
   }
 
@@ -24,28 +24,28 @@ window.addEventListener('keydown', (e) => {
     return
 
   if (e.code === 'KeyL')
-    drauu.mode = 'line'
+    doodler.mode = 'line'
 
   else if (e.code === 'KeyD')
-    drauu.mode = 'draw'
+    doodler.mode = 'draw'
 
   else if (e.code === 'KeyS')
-    drauu.mode = 'stylus'
+    doodler.mode = 'stylus'
 
   else if (e.code === 'KeyR')
-    drauu.mode = 'rectangle'
+    doodler.mode = 'rectangle'
 
   else if (e.code === 'KeyE')
-    drauu.mode = 'ellipse'
+    doodler.mode = 'ellipse'
 
   else if (e.code === 'KeyC')
-    drauu.clear()
+    doodler.clear()
 
   else if (e.code === 'Equal')
-    drauu.brush.size += 0.5
+    doodler.brush.size += 0.5
 
   else if (e.code === 'Minus')
-    drauu.brush.size -= 0.5
+    doodler.brush.size -= 0.5
 })
 
 document.getElementById('undo')?.addEventListener('click', () => doodler.undo())
