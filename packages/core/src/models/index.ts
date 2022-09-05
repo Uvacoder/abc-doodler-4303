@@ -8,7 +8,7 @@ import { LineModel } from './line'
 import { RectModel } from './rect'
 import { DrawModel } from './draw'
 
-export function createModels(Doodler: Doodler): Record<DrawingMode, BaseModel<SVGElement>> {
+export function createModels(doodler: Doodler): Record<DrawingMode, BaseModel<SVGElement>> {
   return {
     draw: new DrawModel(doodler),
     stylus: new StylusModel(doodler),
