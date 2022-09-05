@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite --port 3333 --open",
+    "dev": "vite",
     "build": "cross-env NODE_ENV=production vite build",
     "preview": "vite preview"
   },
