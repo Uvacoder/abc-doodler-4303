@@ -12,10 +12,10 @@
   "bugs": {
     "url": "https://github.com/antfu/drauu/issues"
   },
-  "homepage": "https://abc-drauu.netlify.app",
+  "homepage": "https://abc-doodler.netlify.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/drauu.git"
+    "url": "git+https://github.com/uvacoder/doodler.git"
   },
   "keywords": [],
   "files": [
