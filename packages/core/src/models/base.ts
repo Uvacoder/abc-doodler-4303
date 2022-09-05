@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Brush } from '../types'
-import { Drauu } from '../drauu'
+import { Doodler } from '../doodler'
 import { Point } from '../types'
 import { D } from '../utils'
 
@@ -10,7 +10,7 @@ export abstract class BaseModel<T extends SVGElement> {
   start: Point = undefined!
   el: T | null = null
 
-  constructor(private drauu: Drauu) {}
+  constructor(private doodler: Doodler) {}
 
   onStart(point: Point): SVGElement | undefined {
     return undefined
@@ -25,23 +25,23 @@ export abstract class BaseModel<T extends SVGElement> {
   }
 
   get brush() {
-    return this.drauu.brush
+    return this.doodler.brush
   }
 
   get shiftPressed() {
-    return this.drauu.shiftPressed
+    return this.doodler.shiftPressed
   }
 
   get altPressed() {
-    return this.drauu.altPressed
+    return this.doodler.altPressed
   }
 
   getMousePosition(event: PointerEvent): Point {
-    const el = this.drauu.el!
-    const scale = this.drauu.options.coordinateScale ?? 1
+    const el = this.doodler.el!
+    const scale = this.doodler.options.coordinateScale ?? 1
 
-    if (this.drauu.options.coordinateTransform === false) {
-      const rect = this.drauu.el!.getBoundingClientRect()
+    if (this.doodler.options.coordinateTransform === false) {
+      const rect = this.doodler.el!.getBoundingClientRect()
       return {
         x: (event.pageX - rect.left) * scale,
         y: (event.pageY - rect.top) * scale,
@@ -49,7 +49,7 @@ export abstract class BaseModel<T extends SVGElement> {
       }
     }
     else {
-      const point = this.drauu.svgPoint!
+      const point = this.doodler.svgPoint!
       point.x = event.clientX
       point.y = event.clientY
       const loc = point.matrixTransform(el.getScreenCTM()?.inverse())
