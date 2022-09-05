@@ -1,1 +1,1 @@
-export * from '@drauu/core'
+export * from '@doodler/core'
