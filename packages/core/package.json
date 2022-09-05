@@ -15,7 +15,7 @@
   "homepage": "https://abc-doodler.netlify.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uvacoder/abc-doodler.git"
+    "url": "git+https://github.com/antfu/drauu.git"
   },
   "keywords": [],
   "files": [
